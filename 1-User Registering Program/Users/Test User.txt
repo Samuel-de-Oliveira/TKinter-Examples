@@ -1,0 +1,3 @@
+Username: Test User
+Email:    testuser@whatever.com
+Password: drowssaP
