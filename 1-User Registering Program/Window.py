@@ -4,7 +4,7 @@ from colors import color  #
 import os                 #
 #-*---------------------*-#
 
-way = os.path.dirname(__file__)
+way = os.path.dirname(__file__) # this take the directory where are the tkinter templates
 
 # The Window
 class mainWindow():
@@ -32,7 +32,7 @@ class mainWindow():
 
         # Buttons:
         self.cancel = Button(self.Win, text='Cancel', bg=color[1],
-                            command=lambda: self.Win.destroy())
+                            command=self.Win.destroy)
         self.ok = Button(self.Win, text='Ok', bg=color[1],
                          command=self.winAlert)
         
@@ -51,40 +51,57 @@ class mainWindow():
 
         self.Win.mainloop() # The mainloop
 
-    #-*--------------- Events and outhers windows ---------------*-#
+    #-- Events and outhers windows --#
     def winAlert(self):
-        self.Alert = Tk()
-        self.Alert.resizable(False, False) # Can't resize
-        self.Alert.geometry('330x100') # Geometry: 330 X 100
-        self.Alert['bg'] = color[0] # Background color
-        self.Alert.title(f'{self.Name.get()} has registered successfully') # Title
-        
-        #-- Save the name in a .txt file with the user data --##
-        with open(f'{way}/Users/{self.Name.get()}.txt', 'w+') as file:
+        if len(self.Name.get()) == 0 or len(self.Email.get()) == 0 or len(self.Passw.get()) == 0:
 
-            file.write(f'Username: {self.Name.get()}\n')
-            file.write(f'Email:    {self.Email.get()}\n')
-            file.write(f'Password: {self.Passw.get()}\n')
+            self.Alert = Tk()
+            self.Alert.resizable(False, False) # Can't resize
+            self.Alert.geometry('280x90') # Geometry: 280 X 100
+            self.Alert['bg'] = color[0] # Background color
+            self.Alert.title('Error: Invalid entry')
 
-            print('User has been registered!') # Console message
-        
-        #-- Creating widgets --#
-        self.showEmail = Label(self.Alert, text=f'His/Her Email: {self.Email.get()}',
-                    bg=color[0], font='arial 10', fg=color[3])
-        self.showPassw = Label(self.Alert, text=f'His/Her Password: {self.Passw.get()}',
-                         bg=color[0], font='arial 10', fg=color[3])
-        self.info = Label(self.Alert, text=f'check "Users/{self.Name.get()}.txt to see"',
-                          font='Arial 10', bg=color[0], fg=color[3])
-        self.close = Button(self.Alert, text='Close', bg=color[1],
-                            command=lambda: self.Alert.destroy())
-        
-        #-- Placing widgets --#
-        self.showEmail.pack()
-        self.showPassw.pack()
-        self.info.pack()
-        self.close.pack(side=BOTTOM, pady=7)
+            txt = 'Oops, you forget something! Please check\nthe entry boxes to continue!'
 
+            lblError = Label(self.Alert, text=txt, bg=color[0], fg=color[3]).pack()
+            btnError = Button(self.Alert, text='Ok', bg=color[1], command=self.Alert.destroy)
+            btnError.place(x=220, y=57)
 
-        self.Alert.mainloop() #The mainloop
+        else:
 
-    #-*----------------------------------------------------------*-#
+            self.Alert = Tk()
+            self.Alert.resizable(False, False) # Can't resize
+            self.Alert.geometry('335x110') # Geometry: 330 X 110
+            self.Alert['bg'] = color[0] # Background color
+
+            # The titlle show the user's name:
+            self.Alert.title(f'{self.Name.get()} has registered successfully')
+
+            #-- Save the name in a .txt file with the user data --##
+            with open(f'{way}/Users/{self.Name.get()}.txt', 'w+') as file:
+
+                file.write(f'Username: {self.Name.get()}\n') # His/Her Username
+                file.write(f'Email:    {self.Email.get()}\n') # His/Her Email
+                file.write(f'Password: {self.Passw.get()}\n') # HIs/Her Password
+
+                print('User has been registered!') # Console message
+            
+            #-- Creating widgets --#
+            # The widgets will show the Email and Password only,
+            # the username is in the title
+            self.showEmail = Label(self.Alert, text=f'His/Her Email: {self.Email.get()}',
+                        bg=color[0], font='arial 10', fg=color[3])
+            self.showPassw = Label(self.Alert, text=f'His/Her Password: {self.Passw.get()}',
+                            bg=color[0], font='arial 10', fg=color[3])
+            self.info = Label(self.Alert, text=f'check "Users/{self.Name.get()}.txt to see"',
+                            font='Arial 10', bg=color[0], fg=color[3])
+            self.close = Button(self.Alert, text='Close', bg=color[1],
+                                command=self.Alert.destroy)
+            
+            #-- Placing widgets --#
+            self.showEmail.pack()
+            self.showPassw.pack()
+            self.info.pack()
+            self.close.pack(side=BOTTOM, pady=7)
+
+            self.Alert.mainloop() #The mainloop
