@@ -1,7 +1,10 @@
 #-*---- import area ----*-#
 from tkinter import *     #
 from colors import color  #
+import os                 #
 #-*---------------------*-#
+
+way = os.path.dirname(__file__)
 
 # The Window
 class mainWindow():
@@ -57,7 +60,7 @@ class mainWindow():
         self.Alert.title(f'{self.Name.get()} has registered successfully') # Title
         
         #-- Save the name in a .txt file with the user data --##
-        with open(f'1-User Registering Program/Users/{self.Name.get()}.txt', 'w+') as file:
+        with open(f'{way}/Users/{self.Name.get()}.txt', 'w+') as file:
 
             file.write(f'Username: {self.Name.get()}\n')
             file.write(f'Email:    {self.Email.get()}\n')
