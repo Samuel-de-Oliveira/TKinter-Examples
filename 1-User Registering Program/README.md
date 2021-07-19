@@ -1,8 +1,8 @@
 ## User Registering Program
 
-This is a template based in some registering programs but
-it crated for **Tkinter (Python)**, the desing is so simple to
-understand for anyone, enjoy!
+This is a template based in some registering programs, but
+this is crated for **Tkinter (Python)**, the desing is so simple
+to understand for anyone, enjoy the program!
 
 ---
 
