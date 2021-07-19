@@ -20,6 +20,6 @@ for more info.
 
 ---
 
-**Version of template: 1.1**
+**Version of template: 1.1.1**
 
-*Tamplate maden by: **Samuel de Oliveira***
+*Tamplate maden by: **Samuel de Oliveira©***

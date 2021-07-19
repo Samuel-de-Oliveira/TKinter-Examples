@@ -14,6 +14,6 @@ tamplates when I can, big thanks for you! :D
 
 ---
 
-**Version of project: 1.0.1**
+**Version of project: 1.0.2**
 
-*project maden by **Samuel de Oliveira***
+*project maden by **Samuel de Oliveira©***

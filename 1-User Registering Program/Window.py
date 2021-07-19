@@ -1,8 +1,9 @@
-#-*---- import area ----*-#
-from tkinter import *     #
-from colors import color  #
-import os                 #
-#-*---------------------*-#
+#-*------- import area -------*-#
+from tkinter import *           #
+from tkinter import messagebox  #
+import os                       #
+from colors import color        #
+#-*---------------------------*-#
 
 way = os.path.dirname(__file__) # this take the directory where are the tkinter templates
 
@@ -54,18 +55,10 @@ class mainWindow():
     #-- Events and outhers windows --#
     def winAlert(self):
         if len(self.Name.get()) == 0 or len(self.Email.get()) == 0 or len(self.Passw.get()) == 0:
-
-            self.Alert = Tk()
-            self.Alert.resizable(False, False) # Can't resize
-            self.Alert.geometry('280x90') # Geometry: 280 X 100
-            self.Alert['bg'] = color[0] # Background color
-            self.Alert.title('Error: Invalid entry')
-
-            txt = 'Oops, you forget something! Please check\nthe entry boxes to continue!'
-
-            lblError = Label(self.Alert, text=txt, bg=color[0], fg=color[3]).pack()
-            btnError = Button(self.Alert, text='Ok', bg=color[1], command=self.Alert.destroy)
-            btnError.place(x=220, y=57)
+            
+            # If one of entries have nothing writed: show a error message.
+            messagebox.showerror("Error: Missing arguments",
+            "Check if you are not forgetting anything")
 
         else:
 
