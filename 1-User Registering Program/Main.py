@@ -7,7 +7,7 @@ from Window import mainWindow
 #                                                     #
 #   Open the README.md file for more info.            #
 #                                                     #
-#   Version: 1.1 (Future updates if this have bugs)   #
+#   Version: 1.1.1 (Future updates if this have bugs) #
 #                                                     #
 #-*-------------------------------------------------*-#
 
@@ -16,4 +16,4 @@ print('This is a TKinter template maden by Samuel de Oliveira for free use to ev
 print('wait the program be ready...')
 
 mainWindow()
-print('Bye, bye!')
+print('\nBye, bye!')
