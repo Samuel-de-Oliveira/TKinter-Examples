@@ -9,7 +9,7 @@ way = os.path.dirname(__file__) # this take the directory where are the tkinter 
 
 # The Window
 class mainWindow():
-    def __init__(self):
+    def __init__(self) -> None:
         # Window style:
         self.Win = Tk() 
         self.Win.resizable(False, False) # Can't resize
@@ -53,7 +53,7 @@ class mainWindow():
         self.Win.mainloop() # The mainloop
 
     #-- Events and outhers windows --#
-    def winAlert(self):
+    def winAlert(self) -> None:
         if len(self.Name.get()) == 0 or len(self.Email.get()) == 0 or len(self.Passw.get()) == 0:
             
             # If one of entries have nothing writed: show a error message.

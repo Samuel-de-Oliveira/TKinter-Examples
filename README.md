@@ -10,10 +10,10 @@ a easily understanding of all code, and recomend you read the LICENSE file too,
 but if you know about *MIT Software License* probally you dont need to read.
 
 I'm so glad if you have watch this repository or copied, I will add more
-tamplates when I can, big thanks for you! :D
+tamplates when I can, a huge thanks for you! :D
 
 ---
 
-**Version of project: 1.0.2**
+**Version of project: 1.1**
 
 *project maden by **Samuel de Oliveira©***
