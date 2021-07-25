@@ -5,7 +5,19 @@ import os                       #
 from colors import color        #
 #-*---------------------------*-#
 
-way = os.path.dirname(__file__) # this take the directory where are the tkinter templates
+way = os.path.dirname(__file__) # this take the directory where are the tkinter template
+
+#-*--*-#
+# To add more arguments you need to edit
+# somethings in this file:
+#
+# * The window geometry
+# * add a label and an entry in window with
+#   35px(Y) of space
+# 
+# Following this you can add more things
+# without lost the format of formulary 
+#-*--*-#
 
 # The Window
 class mainWindow():
