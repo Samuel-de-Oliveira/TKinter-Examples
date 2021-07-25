@@ -4,6 +4,11 @@ This is a template based in some registering programs, but
 this is crated for **Tkinter (Python)**, the desing is so simple
 to understand for anyone, enjoy the program!
 
+If you want to add more infos like: phone number, ID number
+or
+outhers things, you need to add more geometry to the window 
+and obviosly outher entry and label.
+
 ---
 
 ## How this work?

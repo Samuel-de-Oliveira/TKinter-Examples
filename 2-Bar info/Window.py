@@ -45,10 +45,14 @@ class mainWindow():
 
     #-- Events and outhers windows --#
     def theBar(self, key) -> None:
-        # Here is the bar config, you need to change this to modify
-        self.numKeyPress += 1
+        #-*---------------------------------------------------------*-#
+        # Here is the bar config, you need to change this to modify   #
+        # or add something into                                       #
+        #-*---------------------------------------------------------*-#
+        
+        self.numKeyPress += 1 # Number of key pressed add 1
 
-        # if in entry have something:
+        # If in entry have something:
         if len(self.numGet.get()) > 0:
             # try give the txt some infos
             try:
@@ -56,7 +60,7 @@ class mainWindow():
                        f'   Times pressed: {self.numKeyPress}   |'+
                        f'   Dividers of {self.numGet.get()}: {self.dividers(self.numGet.get())}')
 
-            # If ahve any error (like typeError) give outher infos
+            # If have any error (like typeError) give outher infos
             except: 
                 txt = (f'Last key pressed: {key.keysym}   |'+
                        f'   Times pressed: {self.numKeyPress}   |'+
@@ -74,5 +78,4 @@ class mainWindow():
         for n in range(1, int(num)+1):
             if int(num) % n == 0:
                 divs.append(n)
-
         return divs

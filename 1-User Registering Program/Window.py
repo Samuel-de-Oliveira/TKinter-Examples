@@ -64,7 +64,7 @@ class mainWindow():
 
             self.Alert = Tk()
             self.Alert.resizable(False, False) # Can't resize
-            self.Alert.geometry('335x110') # Geometry: 330 X 110
+            self.Alert.geometry('335x110') # Geometry: 335 X 110
             self.Alert['bg'] = color[0] # Background color
 
             # The titlle show the user's name:

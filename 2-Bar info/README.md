@@ -5,6 +5,9 @@ This is a template based in programs like ```MS Word``` or
 like gramtical errors or the number of word and letters in
 the document, enjoy!
 
+If you are using the VS code you can see down a blue bar who work same, but it's
+not interactive yet, but enjoy anyway.
+
 ---
 
 ## How this work?
