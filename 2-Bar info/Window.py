@@ -10,7 +10,7 @@ class mainWindow():
         self.Win.resizable(False, False) # can't resize
         self.Win.geometry('680x310') # Geometry: 680 X 310
         self.Win.title('Bottom info') # Title
-        self.Win['bg'] = color[1] # Background color
+        self.Win['bg'] = color[0] # Background color
         self.Win.bind('<Key>', lambda i: self.theBar(i)) # Bind to read keyboard
         self.numKeyPress = 0 # A var to show the number of keys presseds
 
@@ -18,7 +18,7 @@ class mainWindow():
         #-- Here is the bar! --#
         self.infoBar = Label(self.Win,
                              # Bar formating 
-                             bg=color[0], font='arial 9', anchor=W, fg=color[2],
+                             bg=color[1], font='arial 9', anchor=W, fg=color[3],
 
                              #-*-----------------------------------------------*-#
                              # To add things to the bar you need to make a edit  #
@@ -31,9 +31,9 @@ class mainWindow():
                                  f'   Times pressed: {self.numKeyPress}   |'+
                                   '   Dividers of nothing: Nothing')
 
-        self.divLabel = Label(self.Win, fg=color[2], bg=color[0], font='arial',
+        self.divLabel = Label(self.Win, fg=color[3], bg=color[0], font='arial',
                               text='Digit a number: ')
-        self.numGet = Entry(self.Win, bg=color[3])
+        self.numGet = Entry(self.Win, bg=color[2])
         
 
         #-- Placing Widgets --#

@@ -7,17 +7,17 @@ from colors import color        #
 
 way = os.path.dirname(__file__) # this take the directory where are the tkinter template
 
-#-*--*-#
-# To add more arguments you need to edit
-# somethings in this file:
-#
-# * The window geometry
-# * add a label and an entry in window with
-#   35px(Y) of space
-# 
-# Following this you can add more things
-# without lost the format of formulary 
-#-*--*-#
+#-*------------------------------------------*-#
+# To add more arguments you need to edit       #
+# somethings in this file:                     #
+#                                              #
+# * The window geometry                        #
+# * add a label and an entry in window with    #
+#   35px(Y) of space                           #
+#                                              #
+# Following this you can add more things       #
+# without lost the format of formulary         #
+#-*------------------------------------------*-#
 
 # The Window
 class mainWindow():
@@ -47,7 +47,7 @@ class mainWindow():
         self.cancel = Button(self.Win, text='Cancel', bg=color[1],
                             command=self.Win.destroy)
         self.ok = Button(self.Win, text='Ok', bg=color[1],
-                         command=self.winAlert)
+                         command=self.registering)
         
         #-- Placing widgets --#
         self.lblName.place(x=0, y=25)
@@ -65,15 +65,14 @@ class mainWindow():
         self.Win.mainloop() # The mainloop
 
     #-- Events and outhers windows --#
-    def winAlert(self) -> None:
+    def registering(self) -> None:
         if len(self.Name.get()) == 0 or len(self.Email.get()) == 0 or len(self.Passw.get()) == 0:
             
             # If one of entries have nothing writed: show a error message.
             messagebox.showerror("Error: Missing arguments",
             "Check if you are not forgetting anything")
 
-        else:
-
+        else: # else create a window
             self.Alert = Tk()
             self.Alert.resizable(False, False) # Can't resize
             self.Alert.geometry('335x110') # Geometry: 335 X 110

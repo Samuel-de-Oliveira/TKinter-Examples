@@ -8,5 +8,5 @@
 
 color = ['#424242', # Color 0
         '#4D4D4D', # Color 1
-        '#CDCDCD', # Color 2
-        '#AAAAAA'] # Color 3
+        '#AAAAAA', # Color 2
+        '#CDCDCD',] # Color 3 
