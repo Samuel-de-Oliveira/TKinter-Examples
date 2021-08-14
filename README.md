@@ -11,7 +11,7 @@ a easily understanding of all code, and recomend you read the LICENSE file too,
 but if you know about *MIT Software License* probally you dont need to read.
 All the prgrams have comments, this will help to the understanding.
 
-read here the [TKinter-Docs here](tkdocs.com/tutorial/index.html)!
+read here the [TKinter-Docs here](htttps://tkdocs.com/tutorial/index.html)!
 
 ---
 I'm so glad if you have watch this repository or copied, I will add more
