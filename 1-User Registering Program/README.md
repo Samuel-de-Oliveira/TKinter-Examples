@@ -1,6 +1,5 @@
 ## User Registering Program
-
-This is a template based in some registering programs, but
+This is an example based in some registering programs, but
 this is crated for **Tkinter (Python)**, the desing is so simple
 to understand for anyone, enjoy the program!
 
@@ -10,9 +9,7 @@ outhers things, you need to add more geometry to the window
 and obviosly outher entry and label.
 
 ---
-
 ## How this work?
-
 Obviosly you need to open the ```Main.py``` file to start, in the
 program have 3 entry boxes these are: Name, email, and Password
 after this, pressing the "Ok" button, will create a window with 
@@ -24,7 +21,6 @@ read the [Tkinter's Docs](https://tkdocs.com/tutorial/index.html)
 for more info.
 
 ---
-
-**Version of template: 1.1.1**
+**Version of example: 1.1.1**
 
 *Tamplate maden by: **Samuel de Oliveira©***
