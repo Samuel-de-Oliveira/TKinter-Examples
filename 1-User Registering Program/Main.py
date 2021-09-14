@@ -1,7 +1,6 @@
 #-*------- import area -------*-#
 from tkinter import *           #
 from tkinter import messagebox  #
-import os                       #
 from colors import color        #
 #-*---------------------------*-#
 
@@ -19,8 +18,6 @@ from colors import color        #
 print('This is a TKinter example maden by Samuel de Oliveira for free use to everyone.\n'
       'Follow my github for more: https://github.com/samuel-de-oliveira')
 print('wait the program be ready...')
-
-way = os.path.dirname(__file__) # this take the directory where are the tkinter example
 
 # The Window
 class mainWindow():
@@ -85,7 +82,7 @@ class mainWindow():
             self.Alert.title(f'{self.Name.get()} has registered successfully')
 
             #-- Save the name in a .txt file with the user data --##
-            with open(f'{way}/Users/{self.Name.get()}.txt', 'w+') as file:
+            with open(f'Users/{self.Name.get()}.txt', 'w+') as file:
 
                 file.write(f'Username: {self.Name.get()}\n') # His/Her Username
                 file.write(f'Email:    {self.Email.get()}\n') # His/Her Email
