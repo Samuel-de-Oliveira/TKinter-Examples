@@ -6,6 +6,8 @@ class mainWindow():
         Win = Tk()
         Win.resizable(False, False)
         Win.geometry('500x500')
+        Win['bg'] = 'blue'
+
         Win.mainloop()
 
 mainWindow()
