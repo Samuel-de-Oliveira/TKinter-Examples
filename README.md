@@ -9,12 +9,12 @@ create a fork of my project. Enjoy!
 I recomend you know a little bit about **TKinter** and **Python OOP** for 
 a easily understanding of all code, and recomend you read the LICENSE file too,
 but if you know about *MIT Software License* probally you dont need to read.
-All the prgrams have comments, this will help to the understanding.
+All the programs have comments, this will help to the understanding.
 
 read here the [TKinter-Docs here](https://tkdocs.com/tutorial/index.html)!
 
 ---
-I'm so glad if you have watch this repository or copied, I will add more
+I'm so glad if you have watch this repository or cloned, I will add more
 examples when I can, a huge thanks for you! :D
 
 ---
