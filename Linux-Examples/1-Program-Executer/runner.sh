@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# If the command dont exist will show a #
-# meassage, and exit.                   #
+# If the command don't exist will show a #
+# meassage, and exit.                    #
+clear
 if [ ! -f /usr/bin/$1 ]; then
 	echo "This command does not exist!"
 	exit 1

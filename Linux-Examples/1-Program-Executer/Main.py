@@ -17,11 +17,12 @@ class mainWindow():
         
         #- widgets -#
         Label(self.Win, text="Run an application here:", bg=color[0], fg=color[3]).pack() # Label
-        Button(self.Win, bg=color[1], text='Run', command=self.run).pack() # Button
         
         # Entry: 
         self.cmd = Entry(self.Win, bg=color[2])
         self.cmd.pack()
+
+        Button(self.Win, bg=color[1], text='Run', command=self.run).pack() # Button
 
         self.Win.mainloop() # The mainloop
 
