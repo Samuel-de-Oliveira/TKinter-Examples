@@ -4,22 +4,6 @@ from tkinter import messagebox  #
 from colors import color        #
 #-*---------------------------*-#
 
-#-*---------- User register Window example ----------*-#
-#                                                      #
-#   This is a window program who makes a .txt file     #
-#   with the data inputed in it, enjoy! :D             #
-#                                                      #
-#   Open the README.md file for more info.             #
-#                                                      #
-#   Version: 1.1.1 (Future updates if this have bugs)  #
-#                                                      #
-#-*--------------------------------------------------*-#
-
-print('This is a TKinter example maden by Samuel de Oliveira for free use to everyone.\n'
-      'Follow my github for more: https://github.com/samuel-de-oliveira')
-print('wait the program be ready...')
-
-# The Window
 class mainWindow():
     def __init__(self) -> None:
         # Window style:
@@ -70,7 +54,7 @@ class mainWindow():
             
             # If one of entries have nothing writed: show a error message.
             messagebox.showerror("Error: Missing arguments",
-            "Check if you are not forgetting anything")
+            "Check if you are not forgeting anything")
 
         else: # else create a window
             self.Alert = Tk()
@@ -111,4 +95,3 @@ class mainWindow():
             self.Alert.mainloop() #The mainloop
 
 mainWindow() # Start window
-print('\nBye, bye!')

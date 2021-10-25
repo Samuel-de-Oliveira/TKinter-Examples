@@ -3,25 +3,9 @@ from tkinter import *     #
 from colors import color  #
 #-*---------------------*-#
 
-#-*--------------- Bar info example ---------------*-#
-#                                                     #
-#     This is a program who show a small bar with     #
-#   some infos just like show key pressed or show     #
-#   the dividers of a number.                         #
-#                                                     #
-#   Open the README.md file for more info.            #
-#                                                     #
-#   Version: 1.0 (Future updates if this have bugs)   #
-#                                                     #
-#-*-------------------------------------------------*-#
-
-print('This is a TKinter example maden by Samuel de Oliveira for free use to everyone.\n'
-      'Follow my github for more: https://github.com/samuel-de-oliveira')
-print('wait the program be ready...')
-
-# Window Config
 class mainWindow():
     def __init__(self) -> None:
+        # Window style #
         self.Win = Tk()
         self.Win.resizable(False, False) # can't resize
         self.Win.geometry('680x310') # Geometry: 680 X 310
@@ -36,7 +20,7 @@ class mainWindow():
         self.infoBar = Label(self.Win,
                              # Bar formating 
                              bg=color[1], font='arial 9', anchor=W, fg=color[3],
-                             # Bar infos
+                             # Bar aributes
                              text='Last key pressed: None   |'+
                                  f'   Times pressed: {self.numKeyPress}   |'+
                                   '   Dividers of nothing: Nothing')
@@ -86,5 +70,3 @@ class mainWindow():
         return divs
 
 mainWindow()
-
-print('\nBye, bye!')
