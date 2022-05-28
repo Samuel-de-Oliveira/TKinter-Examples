@@ -1,14 +1,16 @@
-#-*-- Import area --*-#
-from tkinter import * #
-from colors import *  #
-import os             #
-#-*-----------------*-#
+#-*------- Import area -------*-#
+from tkinter import *           #
+from tkinter import messagebox  #
+from colors import *            #
+import os                       #
+#-*---------------------------*-#
 
 # If working in Windows the program will close.
-if os.name in ('nt', 'dos'): print('Sorry, this software don\'t work in Windows :('); exit()
+if os.name in ('nt', 'dos'):
+    messagebox.showerror('Error: Sorry, this software doesn't work in Windows!"); exit()
 
 class mainWindow():
-    def __init__(self):
+    def __init__(self) -> None:
         #- Window style -#
         self.Win = Tk() # The window
         self.Win.resizable(False, False) # Can't resize
@@ -26,7 +28,7 @@ class mainWindow():
 
         self.Win.mainloop() # The mainloop
 
-    def run(self): 
+    def run(self) -> None: 
         # The program basically work here  #
         # the "os.system" run a command in #
         # terminal and I have user the bash#
