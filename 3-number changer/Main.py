@@ -4,7 +4,7 @@ from colors import *  #
 #-*-----------------*-#
 
 class mainWindow():
-    def __init__(self):
+    def __init__(self) -> None:
         # -- Window style -- #
         self.Win = Tk()
         self.Win.resizable(False, False)
@@ -26,7 +26,7 @@ class mainWindow():
 
         self.Win.mainloop()
 
-    def plus(self):
+    def plus(self) -> None:
         #-*---------------------------------*-#
         #                                     #
         # When the "plus 1" button is pressed #
@@ -38,7 +38,7 @@ class mainWindow():
         print(f'The number now is: {self.number}')
         self.main['text'] = self.number
 
-    def minus(self):
+    def minus(self) -> None:
         #-*---------------------------------*-#
         #                                     #
         # The same happens here, but this do  #
