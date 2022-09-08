@@ -12,7 +12,7 @@ class mainWindow():
         self.Win.title('Number Changer')
         self.Win['bg'] = color[0]
         
-        self.number = 0
+        with open('number', "r") as file: self.number = file.read()
 
         # -- Widgets -- #
         Button(self.Win, text=' Plus 1 ', bg=color[2],
@@ -34,8 +34,9 @@ class mainWindow():
         # change the label.                   #
         #                                     #
         #-*---------------------------------*-#
-        self.number += 1
+        self.number = int(self.number) + 1
         print(f'The number now is: {self.number}')
+        with open('number', 'w') as file: file.write(str(self.number))
         self.main['text'] = self.number
 
     def minus(self) -> None:
@@ -45,10 +46,11 @@ class mainWindow():
         # a -1                                #
         #                                     #
         #-*---------------------------------*-#
-        self.number -= 1
+        self.number = int(self.number) - 1
         if self.number < 0: self.number = 0
 
         print(f'The number now is: {self.number}')
+        with open('number', 'w') as file: file.write(str(self.number))
         self.main['text'] = self.number
 
 mainWindow()
