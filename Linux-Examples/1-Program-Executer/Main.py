@@ -5,9 +5,11 @@ from colors import *            #
 import os                       #
 #-*---------------------------*-#
 
-# If working in Windows the program will close.
-if os.name in ('nt', 'dos'):
-    messagebox.showerror('Error: Sorry, this software doesn't work in Windows!"); exit()
+# If working in Windows or Mac the program will close.
+if os.name in ('nt', 'dos', 'win32', 'cygwin', 'darwin'):
+    messagebox.showerror('Error: Sorry, this software doesn\'t work in Windows!')
+    exit()
+
 
 class mainWindow():
     def __init__(self) -> None:
@@ -29,13 +31,10 @@ class mainWindow():
         self.Win.mainloop() # The mainloop
 
     def run(self) -> None: 
-        # The program basically work here  #
-        # the "os.system" run a command in #
-        # terminal and I have user the bash#
-        # command to run the "runner.sh"   #
-        # file. To know more about open the#
-        # same file in directory.          #
-        os.system(f'bash runner.sh {self.cmd.get()}')
+        # Run the command and then Close #
+        # the software. It's very simple #
+        # anyway.                        #
+        os.system(f'{self.cmd.get()} &')
         self.Win.destroy()
 
 mainWindow()
